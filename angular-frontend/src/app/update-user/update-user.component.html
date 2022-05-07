@@ -1,0 +1,29 @@
+<h3>Update User</h3>
+<div  style="width: 500px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="user.name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Email Id</label>
+      <input type="text" class="form-control" id="emailId" required [(ngModel)]="user.emailId" name="emailId">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Phone</label>
+      <input type="text" class="form-control" id="phone" required [(ngModel)]="user.phone" name="phone">
+    </div>
+    <div class="form-group">
+      <label for="name">Date</label>
+      <input type="date" class="form-control" id="date" required [(ngModel)]="user.date" name="date">
+    </div>
+    <div class="form-group">
+      <label for="name">Reason</label>
+      <input type="text" class="form-control" id="reason" required [(ngModel)]="user.reason" name="reason">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
