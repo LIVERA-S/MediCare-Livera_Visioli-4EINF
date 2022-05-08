@@ -12,7 +12,7 @@ CORS(app)
 
 @app.route('/')
 def index():
-    return "Ciao"
+    return "Ciao00000"
 
 @app.route('/users', methods=['POST', 'GET'])
 def data():
