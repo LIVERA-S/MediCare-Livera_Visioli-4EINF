@@ -10,7 +10,7 @@ import { UserService } from '../user.service';
 })
 export class UpdateUserComponent implements OnInit {
 
-  _id: string = undefined!;
+  _id: string = "";
   user: User = undefined!;
   constructor(private route: ActivatedRoute,private router: Router,
     private userService: UserService) { }

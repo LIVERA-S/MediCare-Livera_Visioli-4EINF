@@ -10,7 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class UserDetailsComponent implements OnInit {
 
-  _id: string = undefined!;
+  _id: string = "";
   user: User = undefined!;
 
   constructor(private route: ActivatedRoute,private router: Router,
