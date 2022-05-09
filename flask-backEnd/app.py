@@ -74,9 +74,9 @@ def onedata(id):
         id = data['_id']
         name = data['name']
         emailId = data['emailId']
-        phone = body['phone']
-        date = body['date']
-        reason = body['reason']
+        phone = data['phone']
+        date = data['date']
+        reason = data['reason']
         dataDict = {
             'id': str(id),
             'name': name,
