@@ -1,11 +1,11 @@
 <div class="panel panel-primary">
     <div class="panel-heading">
-      <h2>Appointments</h2><br>
+      <h2 style="color: white;">Appointments</h2><br>
     </div>
     <div class="panel-body">
       <table class="table table-striped">
         <thead>
-          <tr>
+          <tr style="color: white;">
             <th>Name</th>
             <th>Email</th>
             <th>Phone</th>
@@ -15,7 +15,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let user of users | async">
+          <tr *ngFor="let user of users | async" style="color: white;">
             <td>{{user.name}}</td>
             <td>{{user.emailId}}</td>
             <td>{{user.phone}}</td>

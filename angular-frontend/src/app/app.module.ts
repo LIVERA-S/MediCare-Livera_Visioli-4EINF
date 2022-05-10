@@ -8,13 +8,17 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SiteUpperComponent } from './site-upper/site-upper.component';
+import { SiteLowerComponent } from './site-lower/site-lower.component';
 @NgModule({
   declarations: [
     AppComponent,
     CreateUserComponent,
     UserDetailsComponent,
     UserListComponent,
-    UpdateUserComponent
+    UpdateUserComponent,
+    SiteUpperComponent,
+    SiteLowerComponent
   ],
   imports: [
     BrowserModule,
