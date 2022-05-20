@@ -1,11 +1,13 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, Response
 from flask_pymongo import PyMongo
+from flask_restful import Resource , Api ,reqparse
 from bson.objectid import ObjectId
 from flask_cors import CORS
 
+from bson import json_util
 
 app = Flask(__name__)
-app.config["MONGO_URI"] = 'mongodb://Livera2003:Waduge78&@cluster0-shard-00-00.uylmr.mongodb.net:27017,cluster0-shard-00-01.uylmr.mongodb.net:27017,cluster0-shard-00-02.uylmr.mongodb.net:27017/Livera1?ssl=true&replicaSet=atlas-38dmxu-shard-0&authSource=admin&retryWrites=true&w=majority'
+app.config["MONGO_URI"] = 'mongodb://Emanuele-Visioli:EMAnuele25102004@cluster0-shard-00-00.x7fma.mongodb.net:27017,cluster0-shard-00-01.x7fma.mongodb.net:27017,cluster0-shard-00-02.x7fma.mongodb.net:27017/Sanita?ssl=true&replicaSet=atlas-566dc8-shard-0&authSource=admin&retryWrites=true&w=majority'
 # db = client.lin_flask
 mongo = PyMongo(app)
 CORS(app)
@@ -13,7 +15,7 @@ CORS(app)
 @app.route('/')
 def index():
     return "Ciao00000"
-
+#----------------CRUD----------------------------------------
 @app.route('/users', methods=['POST', 'GET'])
 def data():
     
@@ -118,6 +120,30 @@ def onedata(id):
 
         print('\n # Update successful # \n')
         return jsonify({'status': 'Data id: ' + id + ' is updated!'})
+#----------------CRUD----------------------------------------
+
+@app.route('/dataset')
+# Prendere i dati da MongoDB
+def get():
+    uss = mongo.db.medicMedic.find()#.limit(10)
+    resp = json_util.dumps(uss)
+    return Response(resp, mimetype='application/json')
+
+@app.route('/medic/<string>', methods=['GET'])
+def onedataa(string):
+    # GET a specific data by name
+    if request.method == 'GET':
+        data = mongo.db.medicMedic.find({'Medico': string})
+        resp = json_util.dumps(data)
+        return Response(resp, mimetype = 'application/json') 
+
+@app.route('/nil/<string>', methods=['GET'])
+def onedataaa(string):
+    # GET a specific data by nil
+    if request.method == 'GET':
+        data = mongo.db.medicMedic.find({'NIL': string})
+        resp = json_util.dumps(data)
+        return Response(resp, mimetype = 'application/json') 
 
 if __name__ == '__main__':
     app.debug = True

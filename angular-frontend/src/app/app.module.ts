@@ -10,6 +10,8 @@ import { UpdateUserComponent } from './update-user/update-user.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SiteUpperComponent } from './site-upper/site-upper.component';
 import { SiteLowerComponent } from './site-lower/site-lower.component';
+import { InputcompComponent } from './inputcomp/inputcomp.component';
+import { Inputcomp2Component } from './inputcomp2/inputcomp2.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,9 @@ import { SiteLowerComponent } from './site-lower/site-lower.component';
     UserListComponent,
     UpdateUserComponent,
     SiteUpperComponent,
-    SiteLowerComponent
+    SiteLowerComponent,
+    InputcompComponent,
+    Inputcomp2Component
   ],
   imports: [
     BrowserModule,
