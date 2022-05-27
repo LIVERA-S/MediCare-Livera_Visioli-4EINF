@@ -14,7 +14,14 @@ CORS(app)
 
 @app.route('/')
 def index():
-    return ("Ciao00000")
+    return ("<br/><br/><br/><br/><br/>" +
+        '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0'  +"/users =" + 
+        '<br/><br/>' + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' +"/dataset =" +
+        '<br/><br/>' + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' +"/medic/Nome_Del_Medico =" + 
+        '<br/><br/>' + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' +"/nil/Nome_Di_Un_Nil ="+
+        '<br/><br/>' + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' +"/map ="+
+        '<br/><br/>' + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' +"/chart ="
+    )
 
 #---- CRUD
 @app.route('/users', methods=['POST', 'GET'])
@@ -191,4 +198,3 @@ def tab():
 if __name__ == '__main__':
     app.debug = True
     app.run(host='0.0.0.0', port=5000)
-    
