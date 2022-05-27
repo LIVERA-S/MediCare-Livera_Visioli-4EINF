@@ -12,6 +12,8 @@ import { SiteUpperComponent } from './site-upper/site-upper.component';
 import { SiteLowerComponent } from './site-lower/site-lower.component';
 import { InputcompComponent } from './inputcomp/inputcomp.component';
 import { Inputcomp2Component } from './inputcomp2/inputcomp2.component';
+import { MapComponent } from './map/map.component';
+import { MarkerService } from './marker.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,8 @@ import { Inputcomp2Component } from './inputcomp2/inputcomp2.component';
     SiteUpperComponent,
     SiteLowerComponent,
     InputcompComponent,
-    Inputcomp2Component
+    Inputcomp2Component,
+    MapComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,7 @@ import { Inputcomp2Component } from './inputcomp2/inputcomp2.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [MarkerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
