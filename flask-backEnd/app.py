@@ -3,7 +3,6 @@ from flask_pymongo import PyMongo
 from flask_restful import Resource , Api ,reqparse
 from bson.objectid import ObjectId
 from flask_cors import CORS
-
 from bson import json_util
 
 app = Flask(__name__)
@@ -26,6 +25,7 @@ def data():
         emailId = body['emailId']
         phone = body['phone']
         date = body['date']
+        time = body['time']
         reason = body['reason']
         # db.users.insert_one({
         mongo.db.users.insert_one({
@@ -33,6 +33,7 @@ def data():
             "emailId":emailId,
             "phone":phone,
             'date':date,
+            'time':time,
             'reason':reason
         })
         return jsonify({
@@ -41,6 +42,7 @@ def data():
             'emailId':emailId,
             'phone':phone,
             'date':date,
+            'time':time,
             'reason':reason
         })
     
@@ -54,6 +56,7 @@ def data():
             emailId = data['emailId']
             phone = data['phone']
             date = data['date']
+            time = data['time']
             reason = data['reason']
             dataDict = {
                 'id': str(id),
@@ -61,6 +64,7 @@ def data():
                 'emailId': emailId,
                 'phone':phone,
                 'date':date,
+                'time':time,
                 'reason':reason
             }
             dataJson.append(dataDict)
@@ -78,6 +82,7 @@ def onedata(id):
         emailId = data['emailId']
         phone = data['phone']
         date = data['date']
+        time = data['time']
         reason = data['reason']
         dataDict = {
             'id': str(id),
@@ -85,6 +90,7 @@ def onedata(id):
             'emailId':emailId,
             'phone':phone,
             'date':date,
+            "time":time,
             'reason':reason
         }
         print(dataDict)
@@ -103,6 +109,7 @@ def onedata(id):
         emailId = body['emailId']
         phone = body['phone']
         date = body['date']
+        time = body['time']
         reason = body['reason']
 
         mongo.db.users.update_one(
@@ -113,6 +120,7 @@ def onedata(id):
                     "emailId": emailId,
                     "phone":phone,
                     "date":date,
+                    "time":time,
                     "reason":reason
                 }
             }
@@ -125,7 +133,7 @@ def onedata(id):
 @app.route('/dataset')
 # Prendere i dati da MongoDB
 def get():
-    uss = mongo.db.medicMedic.find()#.limit(10)
+    uss = mongo.db.medici_medicina_generale.find()#.limit(10)
     resp = json_util.dumps(uss)
     return Response(resp, mimetype='application/json')
 
@@ -133,7 +141,7 @@ def get():
 def onedataa(string):
     # GET a specific data by name
     if request.method == 'GET':
-        data = mongo.db.medicMedic.find({'Medico': string})
+        data = mongo.db.medici_medicina_generale.find({'Medico': string})
         resp = json_util.dumps(data)
         return Response(resp, mimetype = 'application/json') 
 
@@ -141,7 +149,7 @@ def onedataa(string):
 def onedataaa(string):
     # GET a specific data by nil
     if request.method == 'GET':
-        data = mongo.db.medicMedic.find({'NIL': string})
+        data = mongo.db.medici_medicina_generale.find({'NIL': string})
         resp = json_util.dumps(data)
         return Response(resp, mimetype = 'application/json') 
 

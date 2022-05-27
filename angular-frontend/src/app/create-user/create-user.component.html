@@ -1,30 +1,41 @@
-<h3 style="color: white;">Informations: </h3> <br>
+<h3 style="color: white;">Informations: </h3>
 <div [hidden]="submitted" style="width: 400px; color: white;">
   <form (ngSubmit)="onSubmit()">
 
     <div class="form-group">
-      <label for="name">Name</label>
-      <input type="text" class="form-control" id="name" required [(ngModel)]="user.name" name="name">
+      <label for="name">Name & Surname</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="user.name" name="name" placeholder="Enter Name and Surname" >
     </div>
 
     <div class="form-group">
       <label for="name">Email</label>
-      <input type="email" class="form-control" id="emailId" required [(ngModel)]="user.emailId" name="emailId">
+      <input type="email" class="form-control" id="emailId" required [(ngModel)]="user.emailId" name="emailId" placeholder="Enter Email" >
     </div>
 
     <div class="form-group">
       <label for="name">Phone</label>
-      <input type="tel" class="form-control" id="phone" required [(ngModel)]="user.phone" name="phone">
+      <input type="tel" class="form-control" id="phone" required [(ngModel)]="user.phone" name="phone" placeholder="Enter Phone Number" >
     </div>
 
-    <div class="form-group">
+    <!--<div class="form-group">
       <label for="name">Date</label>
-      <input type="date" class="form-control" id="date" required [(ngModel)]="user.date" name="date">
+      <input type="date" class="form-control" id="date" required [(ngModel)]="user.date" name="date" placeholder="Date" >
+      <input type="time" min="09:00" max="18:00" class="form-control" id="date" required [(ngModel)]="user.date" name="date" placeholder="Enter Date" >
+    </div>-->
+
+    <div class="form-group">
+      <label for="name">Date & Time</label><br>
+      <form class="form-inline" action="/action_page.php">
+        <input type="date" id="date" required [(ngModel)]="user.date" name="date" placeholder="Date" >
+        <input type="time" min="09:00" max="18:00" id="time" required [(ngModel)]="user.time" name="time" placeholder="Enter Date" >
+      </form>
     </div>
+      
+
 
     <div class="form-group">
       <label for="name">Reason</label>
-      <input type="text" class="form-control" id="reason" required [(ngModel)]="user.reason" name="reason">
+      <input type="text" class="form-control" rows="3" id="reason" required [(ngModel)]="user.reason" name="reason" placeholder="Message" >
     </div>
 
     <br>

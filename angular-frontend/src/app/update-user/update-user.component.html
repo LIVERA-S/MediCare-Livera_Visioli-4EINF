@@ -20,9 +20,14 @@
       <input type="date" class="form-control" id="date" required [(ngModel)]="user.date" name="date">
     </div>
     <div class="form-group">
+      <label for="name">Time</label>
+      <input type="text" class="form-control" id="time" required [(ngModel)]="user.time" name="time">
+    </div>
+    <div class="form-group">
       <label for="name">Reason</label>
       <input type="text" class="form-control" id="reason" required [(ngModel)]="user.reason" name="reason">
     </div>
+    
     <br>
     <button type="submit" class="btn btn-success">Submit</button>
   </form>

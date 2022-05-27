@@ -2,8 +2,8 @@
 
 <section>
   <div class="container">
-    <label for="text" style="margin-bottom:5px; font-size: 30px; font-weight: bold;">MEDICO: </label><small style="margin-left: 15px;" >Es: </small><br>
-    <input class="w3-input w3-border w3-animate-input border border-dark" type="text" style="width:35%; margin-bottom:5px;" name="na" #newname placeholder="Server" ><br>
+    <label for="text" style="margin-bottom:5px; font-size: 30px; font-weight: bold;">MEDICO: </label><small style="margin-left: 15px;" >Es: Adda Giampaolo | Abbiati Carla</small><br>
+    <input class="w3-input w3-border w3-animate-input border border-dark" type="text" style="width:35%; margin-bottom:5px;" name="na" #newname placeholder="Doctor Name" ><br>
     <button (click) = "find(newname)" type="button" class="btn btn-outline-danger">Find</button>
     
   </div>
@@ -13,14 +13,14 @@
 <br>
 <section class="pb-60">
   <div class="container">
-    <label for="text" style="margin-bottom:5px; font-size: 30px; font-weight: bold;">NIL: </label><small style="margin-left: 15px;" >Es: </small><br>
+    <label for="text" style="margin-bottom:5px; font-size: 30px; font-weight: bold;">NIL: </label><small style="margin-left: 15px;" >Es: DERGANO | DUOMO | SAN SIRO | CORSICA</small><br>
     <input class="w3-input w3-border w3-animate-input border border-dark" type="text" style="width:35%; margin-bottom:5px;" name="na" #newNil placeholder="NIL" ><br>
     <button (click) = "findd(newNil)" type="button" class="btn btn-outline-danger">Find</button>
   </div>
   <br>
   <app-inputcomp2 [listaNil] ="dati1"></app-inputcomp2>
 </section>
-
+<!-- /INPUT SECTION -->
 <section id="appointment" class="contact_area bg_cover pt-120 pb-130" style="background-image: url(assets/images/APP.jpg);">
   <div class="container">
   <div class="row justify-content-center">
