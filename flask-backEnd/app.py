@@ -171,7 +171,23 @@ def onedataaa(string):
 @app.route('/map', methods=['GET'])
 def markersGet():
         points = []
-        result = mongo.db.medici_medicina_generale.find().limit(230)
+        result = mongo.db.medici_medicina_generale.find()
+        for i in result:
+            points.append({
+                "Coordinates": {
+                    "lng": i['LONG_X_4326'],
+                    "lat": i['LAT_Y_4326'],
+                    "adress": i["Indirizzo"],
+                    "medico": i["Medico"]
+                }
+            })
+        return jsonify(points)
+
+'''MAP <GEOPANDAS> NIL
+@app.route('/map/nil/<string>', methods=['GET'])
+def markersGetT(string):
+        points = []
+        result = mongo.db.medici_medicina_generale.find({'NIL': string})
         for i in result:
             points.append({
                 "Coordinates": {
@@ -182,7 +198,7 @@ def markersGet():
 
                 }
             })
-        return jsonify(points)
+        return jsonify(points)'''
 
 
 #---- CHART <MATPLOTLIB>
