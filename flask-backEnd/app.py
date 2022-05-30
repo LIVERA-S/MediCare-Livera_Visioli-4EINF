@@ -205,7 +205,8 @@ def markersGetT(string):
 @app.route('/chart', methods=['GET'])
 def tab():
         if request.method == 'GET':
-            data = mongo.db.medici_medicina_generale.aggregate([{"$group":{"_id":"$NIL", "total":{"$sum":1}}}])
+            data = mongo.db.medici_medicina_generale.aggregate([{"$group":{"_id":"$MUNICIPIO", "total":{"$sum":1}}},
+                                                                {"$sort":{"_id":1}}])
             resp = json_util.dumps(data)
         return Response(resp, mimetype = 'application/json') 
 

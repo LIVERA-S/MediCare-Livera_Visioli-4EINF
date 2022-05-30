@@ -9,12 +9,12 @@
   
 .map-frame {
     border: 2px solid #e84e4e;
-    height: 355px;
+    height: 455px;
     width: 100%;
 }
   
 #map {
-    height: 350px;
+    height: 450px;
     width: 100%;
     box-shadow: 0 0 5px -1px rgba(0, 0, 0, 1);
 }
