@@ -1,5 +1,30 @@
 <app-site-upper></app-site-upper>
-<section id="about" >
+
+<div class="container-fluid mt-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 p-3">
+        <div class="section_title pb">
+          <h4 class="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s" style="font-weight: bold;">About OurCreative Proccess</h4>
+          <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s" style="text-align: justify; font-size: 15px;">Medic medic center is a private health facility present 
+            in city of Milan since 2000. We offer the services in various branches of specialist outpatient diagnostics where it possible 
+            to carry out sampling and clinical analyses, visits and diagnostic investigations or continue clinical care paths started in 
+           </p>
+        </div> 
+      </div>
+      <div class="col-sm-6 p-3">
+        <google-chart
+            [type]="myType" 
+            [data]="chartDati" 
+            [width]="width"
+            [height]="height">
+          </google-chart>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--<section id="about" >
   <div class="about_area">
     <div class="container">
       <div class="row">
@@ -29,7 +54,7 @@
       </div>
     </div> 
   </div>
-</section>
+</section>-->
 
 <!---------------------SERVICES----------------------->
 <section id="services" class="features_area pt-120 pb-40">
@@ -89,7 +114,28 @@
   <app-inputcomp [listaDati]="dati"></app-inputcomp>
 </section> 
 <br>
-<section class="pb-60">
+<!---->
+<div class="container-fluid mt-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 p-3">
+        <section class="pb-60">
+            <label for="text" style="margin-bottom:5px; font-size: 30px; font-weight: bold;">NIL: </label><small style="margin-left: 15px;" >Es: DERGANO | DUOMO | SAN SIRO | CORSICA</small><br>
+            <input class="w3-input w3-border w3-animate-input border border-dark" type="text" style="width:70%; margin-bottom:5px;" name="na" #newNil placeholder="NIL" ><br>
+            <button (click) = "findd(newNil)" type="button" class="btn btn-outline-danger">Find</button>
+          <br>
+          <app-inputcomp2 [listaNil] ="dati1"></app-inputcomp2>
+        </section> 
+      </div>
+      <div class="col-sm-6 p-3">
+      
+      </div>
+    </div>
+  </div>
+</div>
+<!---->
+
+<!--<section class="pb-60">
   <div class="container">
     <label for="text" style="margin-bottom:5px; font-size: 30px; font-weight: bold;">NIL: </label><small style="margin-left: 15px;" >Es: DERGANO | DUOMO | SAN SIRO | CORSICA</small><br>
     <input class="w3-input w3-border w3-animate-input border border-dark" type="text" style="width:35%; margin-bottom:5px;" name="na" #newNil placeholder="NIL" ><br>
@@ -97,7 +143,8 @@
   </div>
   <br>
   <app-inputcomp2 [listaNil] ="dati1"></app-inputcomp2>
-</section>
+</section>-->
+
 <!-- /INPUT SECTION -->
 <section id="appointment" class="contact_area bg_cover pt-120 pb-130" style="background-image: url(assets/images/APP.jpg);">
   <div class="container">
