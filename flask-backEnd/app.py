@@ -183,7 +183,7 @@ def markersGet():
             })
         return jsonify(points)
 
-'''MAP <GEOPANDAS> NIL
+#MAP <GEOPANDAS> COL IL NIL
 @app.route('/map/nil/<string>', methods=['GET'])
 def markersGetT(string):
         points = []
@@ -198,7 +198,7 @@ def markersGetT(string):
 
                 }
             })
-        return jsonify(points)'''
+        return jsonify(points)
 
 
 #---- CHART <MATPLOTLIB>

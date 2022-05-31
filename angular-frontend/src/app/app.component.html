@@ -103,25 +103,34 @@
 </section>
 <!---------------------SERVICES----------------------->
 
-<section>
+<!--INPUT-->
+<div class="container-fluid mt-3">
   <div class="container">
-    <label for="text" style="margin-bottom:5px; font-size: 30px; font-weight: bold;">MEDICO: </label><small style="margin-left: 15px;" >Es: Adda Giampaolo | Abbiati Carla</small><br>
-    <input class="w3-input w3-border w3-animate-input border border-dark" type="text" style="width:35%; margin-bottom:5px;" name="na" #newname placeholder="Doctor Name" ><br>
-    <button (click) = "find(newname)" type="button" class="btn btn-outline-danger">Find</button>
-    
+    <div class="row">
+      <div class="col-sm-6 p-3">
+        <section>
+            <label for="text" style="margin-bottom:5px; font-size: 30px; font-weight: bold;">MEDICO: </label><small style="margin-left: 15px;" >Es: Adda Giampaolo | Abbiati Carla</small><br>
+            <input class="w3-input w3-border w3-animate-input border border-dark" type="text" style="width:75%; margin-bottom:5px;" name="na" #newname placeholder="Doctor Name" ><br>
+            <button (click) = "find(newname)" type="button" class="btn btn-outline-danger">Find</button>
+          <br>
+          <app-inputcomp [listaDati]="dati"></app-inputcomp>
+        </section>  
+      </div>
+      <div class="col-sm-6 p-3">
+      
+      </div>
+    </div>
   </div>
-  <br>
-  <app-inputcomp [listaDati]="dati"></app-inputcomp>
-</section> 
+</div>
 <br>
-<!---->
+
 <div class="container-fluid mt-3">
   <div class="container">
     <div class="row">
       <div class="col-sm-6 p-3">
         <section class="pb-60">
             <label for="text" style="margin-bottom:5px; font-size: 30px; font-weight: bold;">NIL: </label><small style="margin-left: 15px;" >Es: DERGANO | DUOMO | SAN SIRO | CORSICA</small><br>
-            <input class="w3-input w3-border w3-animate-input border border-dark" type="text" style="width:70%; margin-bottom:5px;" name="na" #newNil placeholder="NIL" ><br>
+            <input class="w3-input w3-border w3-animate-input border border-dark" type="text" style="width:75%; margin-bottom:5px;" name="na" #newNil placeholder="NIL" ><br>
             <button (click) = "findd(newNil)" type="button" class="btn btn-outline-danger">Find</button>
           <br>
           <app-inputcomp2 [listaNil] ="dati1"></app-inputcomp2>
