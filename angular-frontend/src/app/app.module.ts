@@ -14,6 +14,7 @@ import { InputcompComponent } from './inputcomp/inputcomp.component';
 import { Inputcomp2Component } from './inputcomp2/inputcomp2.component';
 import { MapComponent } from './map/map.component';
 import { MarkerService } from './marker.service';
+import { GoogleChartsModule } from 'angular-google-charts';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { MarkerService } from './marker.service';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    GoogleChartsModule
   ],
   providers: [MarkerService],
   bootstrap: [AppComponent]

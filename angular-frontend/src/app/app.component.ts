@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { ChartType } from 'angular-google-charts';
 import { Observable } from 'rxjs';
 import { flaskLink } from './flaskLink';
-import { Medic } from './medic.model';
+import { ChartData, Medic } from './medic.model';
 
 @Component({
   selector: 'app-root',
@@ -18,12 +19,42 @@ export class AppComponent {
   dataFrame1: Observable<Medic[]>| undefined;
   dati1:Medic[] = undefined!;
   
+
+   /* Grafico */
+   Chart: Observable<ChartData[]>| undefined;
+   chartDati:any[] = undefined!;
+  /* Grafico */
+
   constructor(private http: HttpClient){
   
   }
+   /* Grafico */
   ngOnInit(): void {
-    
+   this.Chart = this.http.get<ChartData[]>(flaskLink._API + "chart");
+   this.Chart.subscribe(this.grafico)
   }
+  grafico = (dati: ChartData[]) => {
+    this.chartDati = [];
+    console.log(dati);
+      dati.forEach(
+      (value : ChartData) =>
+      {
+        /*if (value.LONG_X_4326) > 9.190578;*/
+          this.chartDati.push([value._id,value.total])
+      }
+    )
+  }
+
+  myType = ChartType.PieChart;
+  
+  width= 750;
+  height = 550;
+
+  ChartVector= [];
+  
+ 
+  /* Grafico */
+
   fati = (data: Medic[]) => {
     this.dati = data;
     console.log(data);

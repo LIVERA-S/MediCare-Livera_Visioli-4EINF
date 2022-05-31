@@ -13,3 +13,10 @@ export class Medic {
     LAT_Y_4326: number = 0;
     Specializzazione: string = "";
 }
+
+export class ChartData{
+    _id: string="";
+    total: number=0;
+    LONG_X_4326: number = 0;
+    LAT_Y_4326: number = 0;
+}
