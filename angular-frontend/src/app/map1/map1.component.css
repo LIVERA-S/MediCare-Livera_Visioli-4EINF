@@ -1,0 +1,20 @@
+.map1-container {
+    position: relative;
+    top: 20px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 5px;
+}
+  
+.map1-frame {
+    border: 2px solid #e84e4e;
+    height: 405px;
+    width: 100%;
+}
+  
+#map1 {
+    height: 400px;
+    width: 100%;
+    box-shadow: 0 0 5px -1px rgba(0, 0, 0, 1);
+}

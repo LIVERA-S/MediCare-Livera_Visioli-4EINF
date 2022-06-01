@@ -11,6 +11,7 @@ import { flaskLink } from './flaskLink';
 
 export class MarkerService {
   baseUrl : string = flaskLink._API+"map"
+  baseUrl1 : string = flaskLink._API+"map"+"/nil"+"/DUOMO"
   constructor(private http: HttpClient) { 
     
   }
@@ -26,6 +27,22 @@ export class MarkerService {
         const marker = L.marker([lat, lon]);
 
         marker.addTo(map).bindPopup("Name: " + medico +'<br/>'+ "Adress: " + adress);
+        
+      }
+    })
+   }
+
+   makeCapitalMarkerss(mapp: L.Map): void {
+    this.http.get(this.baseUrl1).subscribe((resn: any) => {
+      for (const i of resn) {
+        console.log(i.Coordinates.lat)
+        const lon = i.Coordinates.lng;
+        const lat = i.Coordinates.lat;
+        const adress = i.Coordinates.adress;
+        const medico = i.Coordinates.medico;
+        const marker = L.marker([lat, lon]);
+
+        marker.addTo(mapp).bindPopup("Name: " + medico +'<br/>'+ "Adress: " + adress);
         
       }
     })
