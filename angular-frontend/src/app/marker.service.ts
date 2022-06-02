@@ -32,6 +32,7 @@ export class MarkerService {
     })
    }
 
+   /*INPUT MAP*/
    makeCapitalMarkerss(mapp: L.Map): void {
     this.http.get(this.baseUrl1).subscribe((resn: any) => {
       for (const i of resn) {
