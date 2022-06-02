@@ -15,12 +15,12 @@ CORS(app)
 @app.route('/')
 def index():
     return ("<br/><br/><br/><br/><br/>" +
-        '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0'  +"/users =" + 
-        '<br/><br/>' + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' +"/dataset =" +
-        '<br/><br/>' + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' +"/medic/Nome_Del_Medico =" + 
-        '<br/><br/>' + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' +"/nil/Nome_Di_Un_Nil ="+
-        '<br/><br/>' + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' +"/map ="+
-        '<br/><br/>' + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' +"/chart ="
+        '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0'  +"/users = mostra tutti i dati degli appuntameti creati tramite operazioni CRUD" + 
+        '<br/><br/>' + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' +"/dataset = mostra tutti i dati presenti all'interno del dataset dei Medici" +
+        '<br/><br/>' + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' +"/medic/Nome_Del_Medico = mostra tutti i dati correlati al medico con il nome inserito" + 
+        '<br/><br/>' + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' +"/nil/Nome_Di_Un_Nil = mostra tutti i dati correlati ai medici che hanno il NIL corrispondente a quello inserito"+
+        '<br/><br/>' + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' +"/map =  mostra tutti i dati che vengono utilizzati per creare la mappa"+
+        '<br/><br/>' + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' +"/chart = mostra tutti i dati che vengono utilizzati per creare il grafico"
     )
 
 #---- CRUD
