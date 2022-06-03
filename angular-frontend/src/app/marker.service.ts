@@ -11,7 +11,7 @@ import { flaskLink } from './flaskLink';
 
 export class MarkerService {
   baseUrl : string = flaskLink._API+"map"
-  baseUrl1 : string = flaskLink._API+"map"+"/nil"+"/DUOMO"
+  baseUrl1 : string =""
   constructor(private http: HttpClient) { 
     
   }

@@ -1,6 +1,7 @@
 import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 import * as L from 'leaflet';
 import { MarkerService } from '../marker.service';
+import { Medic } from '../medic.model';
 
 @Component({
   selector: 'app-map1',
@@ -9,7 +10,21 @@ import { MarkerService } from '../marker.service';
 })
 export class Map1Component implements OnInit {
   private map1 : any;
+  markers:Medic[]=undefined!
+  @Input() set mapdata(value: Medic[]){
+    this.markers=value
+    for (const c of this.markers) {
+      const lon = c.LONG_X_4326;
+        const lat = c.LAT_Y_4326;
+        const adress = c.Medico;
+        const medico = c.Indirizzo
+        const marker = L.marker([lat, lon]);
+
+      marker.addTo(this.map1).bindPopup("Name: " + medico +'<br/>'+ "Adress: " + adress);
+    }
   
+  }
+
   initMap1(): void {
     this.map1 = L.map('map1', {
       center: [ 45.4773, 9.1815 ],
