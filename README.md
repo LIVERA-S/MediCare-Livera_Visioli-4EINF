@@ -3,6 +3,7 @@
 - pip install -r requi.txt
 - npm i -g nodemon
 - flask run or nodemon app.py
+- prendere il link della pagina e sostituirno al link presente nel file flaskLink ("MY-NAME-IS/angular-frontend/src/app/flaskLink.ts")
 
 # Flask URL's
 - Flask_URL + /users = mostra tutti i dati degli appuntameti creati tramite operazioni CRUD
