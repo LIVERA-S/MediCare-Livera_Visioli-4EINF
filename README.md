@@ -13,6 +13,9 @@
 - Flask_URL + /map = mostra tutti i dati che vengono utilizzati per creare la mappa
 - Flask_URL + /chart = mostra tutti i dati che vengono utilizzati per creare il grafico
 
+# URL IMPORTANTE
+- Prendere il link (URL) della pagina web di Flask e sostituirno al link presente nel file flaskLink.ts ("MediCare-Livera_Visioli-4EINF/angular- frontend/src/app/flaskLink.ts").
+
 # Comandi Angular
 - npm i -g @angular/cli
 - npm install leaflet@1.7.1
