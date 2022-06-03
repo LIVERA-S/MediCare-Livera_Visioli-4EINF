@@ -34,7 +34,7 @@ export class MarkerService {
 
    /*INPUT MAP*/
    makeCapitalMarkerss(mapp: L.Map): void {
-    this.http.get(this.baseUrl1).subscribe((resn: any) => {
+    this.http.get(this.baseUrl +"map/nil/").subscribe((resn: any) => {
       for (const i of resn) {
         console.log(i.Coordinates.lat)
         const lon = i.Coordinates.lng;

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 import * as L from 'leaflet';
+import { flaskLink } from '../flaskLink';
 import { MarkerService } from '../marker.service';
 import { Medic } from '../medic.model';
 
@@ -11,18 +12,19 @@ import { Medic } from '../medic.model';
 export class Map1Component implements OnInit {
   private map1 : any;
   markers:Medic[]=undefined!
+
   @Input() set mapdata(value: Medic[]){
-    this.markers=value
+    this.markers = value
     for (const c of this.markers) {
       const lon = c.LONG_X_4326;
         const lat = c.LAT_Y_4326;
         const adress = c.Medico;
-        const medico = c.Indirizzo
+        const medico = c.Indirizzo;
+        const nil = c.NIL
         const marker = L.marker([lat, lon]);
 
-      marker.addTo(this.map1).bindPopup("Name: " + medico +'<br/>'+ "Adress: " + adress);
+      marker.addTo(this.map1).bindPopup("Name: " + medico +'<br/>'+ "Adress: " + adress +'<br/>'+ "Nil: " + nil);
     }
-  
   }
 
   initMap1(): void {
