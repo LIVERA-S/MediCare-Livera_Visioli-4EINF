@@ -15,4 +15,5 @@ Utilizzo delle librerie:
 * Flask permmetterà di utilizzare pymongo 
 
 
-verranno visualizzate le seguenti informazioni: informazioni sul medico (nome, cognome, indirizzo, n municipio), informazioni sullo studio del medico, la vicinanza tra l’utente e lo studio medico più vicino, il  numero di studi medici / ambulatori per zona.
+verranno visualizzate le seguenti informazioni: informazioni sul medico (nome, cognome, indirizzo, n municipio), informazioni sullo studio del medico, 
+la vicinanza tra l’utente e lo studio medico più vicino, il  numero di studi medici / ambulatori per zona.
