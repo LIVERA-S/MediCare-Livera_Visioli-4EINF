@@ -1,0 +1,18 @@
+﻿Nome sviluppatori: Sasmitha Livera, Emanuele Visioli
+
+
+Nome progetto: Sanità vicina (MediCare)
+
+
+Obiettivi: trovare un medio, sia di base per gli adulti che un pediatra per i più piccola, per fornire un’assistenza sanitaria vicina al soggetto che ne ha bisogno
+
+
+Utilizzo delle librerie: 
+* Pandas per lavorare le informazioni e renderle dati utili
+* Leaflet renderà la mappa interattiva e non più statica 
+* pymongo permetterà l’estraizione dei dati dal database
+* Google chart servirà per creare il grafico 
+* Flask permmetterà di utilizzare pymongo 
+
+
+verranno visualizzate le seguenti informazioni: informazioni sul medico (nome, cognome, indirizzo, n municipio), informazioni sullo studio del medico, la vicinanza tra l’utente e lo studio medico più vicino, il  numero di studi medici / ambulatori per zona.
