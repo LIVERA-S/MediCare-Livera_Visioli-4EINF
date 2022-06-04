@@ -14,8 +14,7 @@
 - Flask_URL + /chart = mostra tutti i dati che vengono utilizzati per creare il grafico
 
 # URL IMPORTANTE
-<h3 style="color: green">Una volta aperta la pagina web nella cartella di Flask (riconoscibile per l'urlo contenete la porta 5000) prende il link e inserirlo al link presente nel file flaskLink.ts ("MediCare-Livera_Visioli-4EINF/angular-frontend/src/app/flaskLink.ts")..<h3>
-  ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) `#f03c15`
+<h3 style="color: green">Una volta aperta la pagina web nella cartella di Flask (riconoscibile per l'urlo contenete la porta 5000) prende il link e inserirlo al link presente nel file flaskLink.ts <br>("MediCare-Livera_Visioli-4EINF/angular-frontend/src/app/flaskLink.ts")..<h3>
 
 # Comandi Angular
 - npm i -g @angular/cli
