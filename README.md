@@ -1,3 +1,5 @@
+<h1 style="color: green">il progetto ora è in grado di cambiare dinamicamente l'URL all'interno del file FlaskLink.ts ora non è più necessario cambiarlo manualmente. <h1>
+
 # Flask-Angular-Project
 # Comandi Flask
 - pip install -r requi.txt
@@ -5,8 +7,8 @@
 - flask run or nodemon app.py
 - Prendere il link (URL) della pagina web di Flask e sostituirno al link presente nel file flaskLink.ts ("MediCare-Livera_Visioli-4EINF/angular- frontend/src/app/flaskLink.ts").
 
-# URL IMPORTANTE
-<h3 style="color: green">Una volta aperta la pagina web nella cartella di Flask (riconoscibile per l'urlo contenete la porta 5000) prende il link e inserirlo al link presente nel file flaskLink.ts <br>("MediCare-Livera_Visioli-4EINF/angular-frontend/src/app/flaskLink.ts")<h3>
+# URL
+Una volta aperta la pagina web nella cartella di Flask (riconoscibile per l'urlo contenete la porta 5000) prende il link e inserirlo al link presente nel file flaskLink.ts <br>("MediCare-Livera_Visioli-4EINF/angular-frontend/src/app/flaskLink.ts")
 
 # Flask URL's
 - Flask_URL + /users = mostra tutti i dati degli appuntameti creati tramite operazioni CRUD
