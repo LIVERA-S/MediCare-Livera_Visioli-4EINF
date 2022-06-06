@@ -8,7 +8,7 @@ import { flaskLink } from './flaskLink';
 })
 export class UserService {
 
-  private baseUrl = flaskLink._API +"users";
+  private baseUrl = flaskLink.getUrl() +"/users";
 
   constructor(private http: HttpClient) { }
 

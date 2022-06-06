@@ -12,6 +12,7 @@ import { ChartData, Medic } from './medic.model';
 })
 export class AppComponent {
   title = '';
+  linkFlask = flaskLink.getUrl();
 
   dataFrame: Observable<Medic[]>| undefined;
   dati:Medic[] = undefined!;
@@ -26,11 +27,10 @@ export class AppComponent {
   /* Grafico */
 
   constructor(private http: HttpClient){
-  
   }
    /* Grafico */
   ngOnInit(): void {
-   this.Chart = this.http.get<ChartData[]>(flaskLink._API + "chart");
+   this.Chart = this.http.get<ChartData[]>(this.linkFlask + "/chart");
    this.Chart.subscribe(this.grafico)
   }
   grafico = (dati: ChartData[]) => {
@@ -66,13 +66,13 @@ export class AppComponent {
   }
   find(medico : HTMLInputElement){
    let m = medico.value;
-   this.dataFrame = this.http.get<Medic[]>(flaskLink._API + "medic/" + m);
+   this.dataFrame = this.http.get<Medic[]>(this.linkFlask + "/medic/" + m);
    this.dataFrame.subscribe(this.fati)
   }
 
   findd(nil : HTMLInputElement){
     let n = nil.value;
-    this.dataFrame1 = this.http.get<Medic[]>(flaskLink._API + "nil/" + n);
+    this.dataFrame1 = this.http.get<Medic[]>(this.linkFlask + "/nil/" + n);
     this.dataFrame1.subscribe(this.ciao)
    }
 }

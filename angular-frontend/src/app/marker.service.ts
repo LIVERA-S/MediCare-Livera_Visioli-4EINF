@@ -10,7 +10,7 @@ import { flaskLink } from './flaskLink';
 })
 
 export class MarkerService {
-  baseUrl : string = flaskLink._API+"map"
+  baseUrl : string = flaskLink.getUrl() +"/map"
   baseUrl1 : string =""
   constructor(private http: HttpClient) { 
     
@@ -19,7 +19,7 @@ export class MarkerService {
    makeCapitalMarkers(map: L.Map): void {
     this.http.get(this.baseUrl).subscribe((res: any) => {
       for (const c of res) {
-        console.log(c.Coordinates.lat)
+        //console.log(c.Coordinates.lat)
         const lon = c.Coordinates.lng;
         const lat = c.Coordinates.lat;
         const adress = c.Coordinates.adress;
@@ -36,7 +36,7 @@ export class MarkerService {
    makeCapitalMarkerss(mapp: L.Map): void {
     this.http.get(this.baseUrl +"map/nil/").subscribe((resn: any) => {
       for (const i of resn) {
-        console.log(i.Coordinates.lat)
+        //console.log(i.Coordinates.lat)
         const lon = i.Coordinates.lng;
         const lat = i.Coordinates.lat;
         const adress = i.Coordinates.adress;
