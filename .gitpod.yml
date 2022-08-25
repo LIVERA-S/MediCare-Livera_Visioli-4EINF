@@ -3,7 +3,7 @@ tasks:
   - name : FlaskWebServer
     init: cd flask-backEnd && pip install -r requi.txt && npm i -g nodemon && nodemon app.py # runs during prebuild
   - name : AngWebServer
-    init: cd angular-frontend && npm i -g @angular/cli@13.3.0 && npm i && npm install angular-google-charts@@2.2.2 && NG_APP_URL=$GITPOD_WORKSPACE_URL ng serve --disable-host-check && npm install leaflet@1.7.1 # runs during prebuild
+    init: cd angular-frontend && npm i -g @angular/cli@13.3.0 && npm i && NG_APP_URL=$GITPOD_WORKSPACE_URL ng serve --disable-host-check && npm install leaflet@1.7.1  && npm install angular-google-charts@2.2.2  # runs during prebuild
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
